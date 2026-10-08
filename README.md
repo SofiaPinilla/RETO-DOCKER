@@ -19,7 +19,7 @@
 
 ## El problema
 
-Preparad un programa que analice las notas de un grupo y muestre un informe por consola. Los datos estarán escritos en el código: **no utilicéis `input()` ni un menú**.
+Preparad un programa que analice las notas de un grupo y muestre un informe por consola. Los datos estarán escritos en el código.
 
 ## Datos de partida
 
@@ -64,19 +64,16 @@ Escribid un `Dockerfile`, sin extensión, que:
 - Copie `notas.py` con `COPY`.
 - Configure con `CMD` la ejecución del programa.
 
-Construid la imagen desde la carpeta del proyecto:
+Construid la imagen desde la carpeta del proyecto y ejecutadla.
 
-```bash
-docker build -t informe-notas .
-```
-
-Ejecutadla:
-
-```bash
-docker run --rm informe-notas
-```
 
 El programa debe mostrar el informe y terminar. Si cambiáis el código o los datos, reconstruid la imagen antes de probarla de nuevo.
+
+Para eliminar una imagen:
+
+```bash
+docker rmi informe-notas
+```
 
 ## Entrega
 
@@ -92,11 +89,6 @@ El repositorio debe contener:
 
 - `notas.py`.
 - `Dockerfile`.
-- `README.md` con integrantes, comandos para construir y ejecutar, resultados de las pruebas y respuestas breves:
-  1. ¿Cómo habéis usado la lista y los diccionarios?
-  2. ¿Cómo decidís quién aprueba y quién suspende?
-  3. ¿Qué recibe y devuelve vuestra función?
-  4. ¿Cómo evitáis dividir entre cero si la lista está vacía?
-  5. ¿Qué hace cada instrucción del Dockerfile?
+- `README.md` con integrantes, comandos para construir y ejecutar.
 
 Enviad el enlace a **scpinilla@edem.es** con el asunto `Reto notas Python y Docker — Grupo XX`. Aseguraos de que la profesora pueda acceder.
